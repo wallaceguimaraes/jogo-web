@@ -1,0 +1,461 @@
+#nJogador1{
+width: 300px;
+left: 300px;
+top: 200px;
+
+}
+
+
+
+
+#nJogador2{
+width: 300px;
+left: 300px
+top:300px;
+
+}
+#botao-login{
+	left: 300px;
+	top: 400px;
+	width:80px;
+	height:27px;
+	/*padding-top:50px; /* onde o nome do botao vai ficar*/
+	
+}
+
+
+#vez{
+position: absolute;
+top: 0px;
+left: 300px;
+
+}
+
+#tres{
+position: absolute;
+top: 270px;
+left: 300px;
+}
+#dois{
+position: absolute;
+top: 270px;
+left: 300px;
+}
+#um{
+position: absolute;
+top: 270px;
+left: 300px;
+}
+
+#vai{
+position: absolute;
+top: 270px;
+left: 300px;
+}
+
+.painel-fundo{
+width: 1362px;
+height: 650px;
+border: solid 1px black;
+position: absolute;
+background-image: url('../fundoz.png');
+
+}
+
+.painel-principal{
+width:820px;
+height:600px;
+border:solid 1px #ccc;
+background-image: url('../fundo2.png');
+position: absolute;
+left: 250px;
+top: 50px;
+}
+
+
+.painelprincipal{
+
+width:820px;
+height:600px;
+border:solid 1px #ccc;
+background-image: url('../fundoE.png');
+position: absolute;
+left: 250px;
+top: 50px;
+}
+
+#painel-login{ /*painel de login*/
+	/*margin:auto;*/ /*centralizar*/
+	width:200px;
+	padding:230px; /*espaçamento interno*/
+	/*background-color: #elelel;*/
+}
+
+#painellogin{
+	width:200px;
+	padding:230px;
+	
+}
+
+
+
+
+
+#explosaoroxo1{
+
+position: absolute;
+
+
+
+}
+
+
+
+#explosaoamarelo1{
+	position: absolute;
+}
+
+#explosaovermelho1{
+	position: absolute;
+}
+
+#explosaoverde1{
+	position: absolute;
+}
+
+
+#explosaoazul1{
+	position: absolute;
+}
+
+#explosaopreto1{
+	position: absolute;
+}
+
+#explosaoroxo2{
+
+position: absolute;
+
+}
+
+
+#explosaoamarelo2{
+	position: absolute;
+}
+
+#explosaovermelho2{
+	position: absolute;
+}
+
+#explosaoverde2{
+	position: absolute;
+}
+
+
+#explosaoazul2{
+	position: absolute;
+}
+
+#explosaopreto2{
+	position: absolute;
+}
+
+
+
+
+
+
+#inputJogador1{
+width: 190px;
+position: absolute;
+top:150px;
+left: 50px; 
+
+}
+
+#inputJogador2{
+width: 190px;
+position: absolute;
+top:150px;
+left: 1170px; 
+
+}
+
+
+#pontos1{
+    
+	width: 70px;
+	position: absolute;
+	top:200px;
+    left: 50px;
+}
+
+#pontos2{
+    
+	width: 70px;
+	position: absolute;
+	top:200px;
+    left: 1170px;
+}
+
+
+#acert1{
+	width:70px;
+	position: absolute;
+	top:250px;
+    left: 50px;
+}
+#acert2{
+	width:70px;
+	position: absolute;
+	top:250px;
+    left: 1170px;
+}
+
+
+#inputErro1{
+
+	width:70px;
+	position: absolute;
+	top:310px;
+    left: 50px;
+}
+
+#inputErro2{
+
+	width:70px;
+	position: absolute;
+	top:310px;
+    left: 1170px;
+}
+
+
+
+#inputPorcento1{
+width:70px;
+position: absolute;
+top:370px;
+left: 50px;
+
+}
+#inputPorcento2{
+width:70px;
+position: absolute;
+top:370px;
+left: 1170px;
+
+}
+
+
+
+
+#mira1{
+width: 100px;
+height: 65px;
+position: absolute;
+left: 100px;
+top :400px;
+}
+
+#mira2{
+width: 100px;
+height: 65px;
+position: absolute;
+left: 700px;
+top :400px;
+}
+
+
+
+.cena{
+	margin: auto;
+	position:absolute;
+	left: 250px;
+	top:25px;
+}
+#pr{
+	position: absolute;
+}
+
+#fogoroxo1{
+
+	position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoamarelo1{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoverde1{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+#fogocolorido1{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoazul1{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+
+#fogoerro1{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogovermelho1{
+	position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+
+
+
+
+
+#fogoroxo2{
+
+	position: absolute;
+	right: 40px;
+	top: 480px;
+}
+
+#fogoamarelo2{
+position: absolute;
+	right: 40px;
+	top: 480px;
+}
+
+#fogoverde2{
+position: absolute;
+	right: 40px;
+	top: 480px;
+}
+#fogocolorido2{
+position: absolute;
+	right: 40px;
+	top: 480px;
+}
+
+#fogoazul2{
+position: absolute;
+	right: 40px;
+	top: 480px;
+}
+
+
+#fogoerro2{
+position: absolute;
+	right: 40px;
+	top: 480px;
+}
+
+#fogovermelho2{
+	position: absolute;
+	right: 40px;
+	top: 480px;
+}
+
+
+
+
+
+
+caption#titulo{
+
+font-size: 40px;
+
+}
+
+
+
+
+#pam{
+	position: absolute;
+}
+
+#pver{
+	position: absolute;
+}
+
+#pvm{
+position: absolute;
+}
+
+#paz{
+position: absolute;
+}
+#pla{
+	position: absolute;
+}
+
+#canhao1{
+position: absolute;
+left: 0px;
+top: 500px;
+}
+
+#canhao2{
+position: absolute;
+left: 725px;
+top:500px;
+}
+
+#bola1{
+	position: absolute;
+	left: 100px; 
+	top: 510px;
+}
+
+
+
+#bola2{
+	position: absolute;
+	left: 765px; 
+	top: 505px;
+}
+
+
+#acerto1{
+	position: absolute;
+	left: 70px;
+	top:430px;
+}
+
+#erro1{
+position: absolute;
+left: 70px;
+top:430px;
+
+}
+
+#acerto2{
+	position: absolute;
+	left: 650px;
+	top:430px;
+}
+
+#erro2{
+position: absolute;
+left: 650px;
+top:430px;
+
+}
+
+/**Modal**/
+
+
+
+

@@ -1,0 +1,332 @@
+
+.painel-fundo{
+width: 1362px;
+height: 650px;
+border: solid 1px black;
+position: absolute;
+background-image: url('../fundoz.png');
+
+}
+
+
+#des{
+  position: absolute;
+  top: 510px;
+  right: 45px;
+  color:green;
+}
+
+
+
+#instru{
+ 	top: 435px;
+ 	right: 120px;
+	position: absolute;
+	color: red;
+
+}
+h4#dese{
+	color: white;
+}
+
+.painel-principal{
+width:820px;
+height:600px;
+border:solid 1px #ccc;
+background-image: url('../fundo2.png');
+position: absolute;
+left: 250px;
+top: 50px;
+}
+
+
+.painelfundo{
+
+position: absolute;
+width: 1362px;
+height: 650px;
+border: solid 1px black;
+background-image: url('../fundoz.png');
+}
+
+.painelprincipal{
+
+width:820px;
+height:600px;
+border:solid 1px #ccc;
+background-image: url('../fundoE.png');
+position: absolute;
+left: 250px;
+top: 50px;
+}
+
+#painel-login{ /*painel de login*/
+	/*margin:auto;*/ /*centralizar*/
+	width:200px;
+	padding:230px; /*espaçamento interno*/
+	/*background-color: #elelel;*/
+}
+
+#painellogin{
+	width:200px;
+	padding:230px;
+	
+}
+
+#nJogador{ /* campo de texto */
+	width:200px;
+	
+}
+
+#inputJogador{
+width: 190px;
+position: absolute;
+top:150px;
+left: 50px; 
+
+}
+
+
+#explosaoroxo{
+
+position: absolute;
+
+
+
+}
+
+
+#botaoJogador1{
+	position: absolute;
+	left: 150px;
+	top: 200px;
+}
+
+
+#botaoMulti{
+	position: absolute;
+	left: 150px;
+	top: 300px;
+}
+
+#botaoOnline{
+	position: absolute;
+	left: 150px;
+	top: 400px;
+}
+
+
+#explosaoamarelo{
+	position: absolute;
+}
+
+#explosaovermelho{
+	position: absolute;
+}
+
+#explosaoverde{
+	position: absolute;
+}
+
+
+#explosaoazul{
+	position: absolute;
+}
+
+#explosaopreto{
+	position: absolute;
+}
+
+
+
+.barra{
+position:absolute; 
+width: 27px;
+height: 95px;
+border: solid 1px black;
+top: 300px;
+left: 100px;
+
+}
+
+#logo{
+	position: absolute;
+	top: 0px;
+	left:300px;
+}
+
+#carregamento{
+	top: 300px;
+	left: 100px;
+	width: 27px;
+	height: 95px;
+	background-image: url('../barracarregamento.png');
+}
+
+#pontos{
+    
+	width: 70px;
+	position: absolute;
+	top:200px;
+    left: 50px;
+}
+
+#acert{
+	width:70px;
+	position: absolute;
+	top:250px;
+    left: 50px;
+}
+#inputErro{
+
+	width:70px;
+	position: absolute;
+	top:310px;
+    left: 50px;
+}
+
+#inputPorcento{
+width:70px;
+position: absolute;
+top:370px;
+left: 50px;
+
+}
+
+#record{
+position: absolute;
+top: 0px;
+left: 200px;
+
+}
+
+#botao-login{
+	width:80px;
+	height:27px;
+	/*padding-top:50px; /* onde o nome do botao vai ficar*/
+	
+}
+
+
+
+#mira{
+width: 100px;
+height: 65px;
+position: absolute;
+left: 100px;
+top :400px;
+}
+
+.cena{
+	margin: auto;
+	position:absolute;
+	left: 250px;
+	top:25px;
+}
+#pr{
+	position: absolute;
+}
+
+#fogoroxo{
+
+	position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoamarelo{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoverde{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+#fogocolorido{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoazul{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogoerro{
+position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+#fogovermelho{
+	position: absolute;
+	left: 40px;
+	top: 480px;
+}
+
+caption#titulo{
+
+font-size: 40px;
+border: 3px;
+
+}
+
+
+
+
+#pam{
+	position: absolute;
+}
+
+#pver{
+	position: absolute;
+}
+
+#pvm{
+position: absolute;
+}
+
+#paz{
+position: absolute;
+}
+#pla{
+	position: absolute;
+}
+
+#canhao1{
+position: absolute;
+left: 0px;
+top: 500px;
+}
+
+
+
+#canhao2{
+position: absolute;
+left: 725px;
+top:500px;
+}
+
+#bola{
+	position: absolute;
+	left: 100px; 
+	top: 510px;
+}
+
+#acerto{
+	position: absolute;
+	left: 70px;
+	top:430px;
+}
+
+#erro{
+position: absolute;
+left: 70px;
+top:430px;
+
+}
