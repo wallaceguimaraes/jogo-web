@@ -4,9 +4,9 @@
 class Conexao {
      //Estes dados devem ser coletados de outro lugar... claro...
      private static $host = "localhost";
-     private static $user = "root";
-     private static $password = "";
-     private static $database = "banco-jogo";
+     private static $user = "id5811126_wallace";
+     private static $password = "wallace7";
+     private static $database = "id5811126_bancojogo";
      private static $charset = "utf8";
      private static $conexao;
 

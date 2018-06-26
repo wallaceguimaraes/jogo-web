@@ -139,13 +139,13 @@ musica.play();
 <input type="text" id="nJogador2" name="nome2" placeholder="Nome do jogador 2"/>
 <br></br>
 <input type="button" 
-value="Fácil" style="width: 100px; position: absolute; top: 231px; right: 50px; color: purple;" onclick="facil()">
+value="Fácil" style="width: 100px; position: absolute; top: 231px; right: 50px;" onclick="facil()">
 <input type="button" 
-value="Normal" style="width: 100px; position: absolute; top: 254px; right: 50px; color: purple;" onclick="medio()">
+value="Normal" style="width: 100px; position: absolute; top: 254px; right: 50px;" onclick="medio()">
 <input type="button"
-value="Difícil" style="width: 100px; position: absolute; top: 277px; right: 50px; color: purple;" onclick="dificil()">
+value="Difícil" style="width: 100px; position: absolute; top: 277px; right: 50px;" onclick="dificil()">
 <input type="button" 
-value="Insano" style="width: 100px; position: absolute; top: 300px; right: 50px; color: purple;" onclick="insano()">
+value="Insano" style="width: 100px; position: absolute; top: 300px; right: 50px;" onclick="insano()">
 <input type="text" id="dificult" name="dificult" readonly="readonly" placeholder="Dificuldade"/>
 <br></br>
 <button type="submit">Entrar</button>
