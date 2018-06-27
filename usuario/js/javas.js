@@ -12,8 +12,6 @@ var pratoesquerdo;//posicionamento final do prato aleatorio
 var pratotop;//
 var pE;//posicionamento X do prato usado para manipular a variavel pratX1 e pratx2
 var pT;//posicionamento Y do prato "             "              "  pratY2
-//var dBolax;
-//var dBolay; //direção da bola caso ela usasse uma direção
 var pBolax;//posição da bola
 var pBolay;
 var ponto=0;//pontuação do jogador
@@ -28,54 +26,30 @@ var flag=1;
 var pratoexplosao;
 var multiplicador = 1;
 var segundoauxiliar=4000;
-/*
-function left(){
-var arco = document.getElementById("mira");
-Left = arco.offsetTop;
-console.log(Left);
-}
-*/
+
+
 function inicia(){
 	
-	//var seg = sessionStorage.getItem('dificuldade');
-	//alert(seg)
-
-//  segundos=segundos+seg;
-	//alert("Atenção! Você terá 1 minuto e 40 segundos para acertar os pratos.")
-
-
-
-
-
 	dx=0;//direção x
 	dy=0;//direção y
 	px=100;//poicionamento x da mira
 	py=400;//posicionamento y da mira
 	vel=10;//velocidade
+	var escolha = sessionStorage.getItem('dados');
 
-
-
-
-var escolha = sessionStorage.getItem('dados');
-
- if(escolha == "Fácil"){
-segundos= segundos + 600; 
-
-}else if(escolha == "Médio"){
-segundos = segundos;
-
-}else if(escolha =="Difícil"){
-segundos = segundos - 290;
-vel=18;
-
-}else if(escolha == "Insano"){
-segundos= segundos - 450;
-vel=25;
-}else{
-	segundos = segundos;
+			if(escolha == "Fácil"){
+				segundos= segundos + 600; 
+				}else if(escolha == "Médio"){
+				segundos = segundos;
+					}else if(escolha =="Difícil"){
+						segundos = segundos - 290;
+						vel=18;
+					}else if(escolha == "Insano"){
+						segundos= segundos - 450;
+						vel=25;
+			}else{
+			segundos = segundos;
 }
-
-
 
 	obj=document.getElementById("mira");
 	document.addEventListener("keydown",teclaDw);
@@ -83,30 +57,30 @@ vel=25;
 	document.addEventListener("keyup",tiroUp);
 	document.addEventListener("keyup",teclaUp);
 	tmp=setInterval(enterFrame, 20);//taxa de frames
-	//verificaMusica();
 	setTimeout('acabaJogo()',100000);//div modal
 
 	exibe();
-
 
 }
 
 
 function atribuirFlag(){
-flag = flag+1;
-return flag;
-
+		flag = flag+1;
+	
+	return flag;
 }
 
 function tempo(op) {//relogio
-	if (op == 1) {
-		document.getElementById('parar').style.display = "block";
-		document.getElementById('comeca').style.display = "none";
-	}
+		if (op == 1) {
+			document.getElementById('parar').style.display = "block";
+			document.getElementById('comeca').style.display = "none";
+		}
+	
 	var s = 1;
 	var m = 0;
 	var h = 0;
-		intervalo = window.setInterval(function() {
+	
+	intervalo = window.setInterval(function() {
 			if (s == 60) { m++; s = 0; }
 			if (m == 60) { h++; s = 0; m = 0; }
 			if (h < 10) document.getElementById("hora").innerHTML = "0" + h + "h"; else document.getElementById("hora").innerHTML = h + "h";
@@ -120,216 +94,181 @@ function tempo(op) {//relogio
 
 function tiroDw(){
 
-if(flag==1){
+		if(flag==1){
 
 
-		var tecla=event.keyCode;
+			var tecla=event.keyCode;
 
-		if (tecla==65) {
+			if (tecla==65) {
 
-    	var audio = document.getElementById('audio');
-		audio.play();
-		totalTiro=totalTiro+1;			
-		var left = getPosicaoMiraEsquerda();//posição mira
-		var top = getPosicaoMiraTopo();//posição mira
-		var bx1;//posicionamento da bola X
-		var bx2;//
-		var by1;//
-		var by2;//
-		var pratx1;
-		var pratx2;
-		var praty1;
-		var praty2;
-		document.getElementById('bola').style.left=left+30+"px";//a bola vai na posição da mira
-    	document.getElementById('bola').style.top=top+27+"px";//as variaveis left e top são a posição da mira
-    	pBolax = posicaoBolaEsquerda();//peguei a posição da bola e joguei na variavel
-    	pBolay = posicaoBolaTopo();
-    	bx1=pBolax-30;//acertando o posicionamento da bola
-    	by1=pBolay-27;
-    	pratx1=pE+42;
-    	pratx2=pE-55;//posição prato
-    	praty2=pT-36;
-    	pr1 = praty2+72;// Não estava pegando posicao y1 fiz essa gambiarra
+				var audio = document.getElementById('audio');
+				audio.play();
+				totalTiro=totalTiro+1;			
+				var left = getPosicaoMiraEsquerda();//posição mira
+				var top = getPosicaoMiraTopo();//posição mira
+				var bx1;//posicionamento da bola X
+				var bx2;//
+				var by1;//
+				var by2;//
+				var pratx1;
+				var pratx2;
+				var praty1;
+				var praty2;
+				
+				document.getElementById('bola').style.left=left+30+"px";//a bola vai na posição da mira
+				document.getElementById('bola').style.top=top+27+"px";//as variaveis left e top são a posição da mira
+				pBolax = posicaoBolaEsquerda();//peguei a posição da bola e joguei na variavel
+				pBolay = posicaoBolaTopo();
+				bx1=pBolax-30;//acertando o posicionamento da bola
+				by1=pBolay-27;
+				pratx1=pE+42;
+				pratx2=pE-55;//posição prato
+				praty2=pT-36;
+				pr1 = praty2+72;// Não estava pegando posicao y1 fiz essa gambiarra
   
-    if(bx1 <= pratx1 && bx1 >=pratx2 && by1 <= pr1 && by1 >= praty2){// verifica se a bola esta na posição do prato
-		document.getElementById('acerto').style.display='block';// aparece a div de acerto
+				if(bx1 <= pratx1 && bx1 >=pratx2 && by1 <= pr1 && by1 >= praty2){// verifica se a bola esta na posição do prato
+				document.getElementById('acerto').style.display='block';// aparece a div de acerto
 		
-			if(pratAleatorio=="pr"){
+					if(pratAleatorio=="pr"){
 				
-				ponto = ponto+35*multiplicador;
-				document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";//valor porcento no campo texto, não esta funcionando
-				document.getElementById('fogoroxo').style.display='block';
+						ponto = ponto+35*multiplicador;
+						document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";//valor porcento no campo texto, não esta funcionando
+						document.getElementById('fogoroxo').style.display='block';
+						document.getElementById('explosaoroxo').style.left=pE+"px";
+						document.getElementById('explosaoroxo').style.top=pT+"px";	
+						document.getElementById('explosaoroxo').style.display='block';
 
-				document.getElementById('explosaoroxo').style.left=pE+"px";
-				document.getElementById('explosaoroxo').style.top=pT+"px";	
-				document.getElementById('explosaoroxo').style.display='block';
+						esconde();
 
-				esconde();
-				//pratoexplosao="'explosaoroxo'";
+						setTimeout('escondeExroxo()',300);
 
-				setTimeout('escondeExroxo()',300);
+					}else if(pratAleatorio=="pam"){
+						ponto = ponto+20*multiplicador;
+						document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('fogoamarelo').style.display='block';
+						document.getElementById('explosaoamarelo').style.left=pE+"px";
+						document.getElementById('explosaoamarelo').style.top=pT+"px";	
+						document.getElementById('explosaoamarelo').style.display='block';
+						
+						esconde();
+						setTimeout('escondeExamarelo()',300);
 
-				
+					}else if(pratAleatorio=="paz"){
+						ponto = ponto+15*multiplicador;
+						document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('fogoazul').style.display='block';
+						document.getElementById('explosaoazul').style.left=pE+"px";
+						document.getElementById('explosaoazul').style.top=pT+"px";	
+						document.getElementById('explosaoazul').style.display='block';
 
-			}else if(pratAleatorio=="pam"){
-				ponto = ponto+20*multiplicador;
-				document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				document.getElementById('fogoamarelo').style.display='block';
+						esconde();
+						setTimeout('escondeExazul()',300);
 
+					}else if(pratAleatorio=="pver"){
+						ponto = ponto-10*multiplicador;
+						document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('fogoverde').style.display='block';
+						document.getElementById('explosaoverde').style.left=pE+"px";
+						document.getElementById('explosaoverde').style.top=pT+"px";	
+						document.getElementById('explosaoverde').style.display='block';
 
-				document.getElementById('explosaoamarelo').style.left=pE+"px";
-				document.getElementById('explosaoamarelo').style.top=pT+"px";	
-				document.getElementById('explosaoamarelo').style.display='block';
-				//pratoexplosao="'explosaoamarelo'";
-				esconde();
+						esconde();
+						setTimeout('escondeExverde()',300);
 
-				setTimeout('escondeExamarelo()',300);
+					}else if(pratAleatorio=="pvm"){
+						ponto = ponto+25*multiplicador;
+						document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('fogovermelho').style.display='block';
+						document.getElementById('explosaovermelho').style.left=pE+"px";
+						document.getElementById('explosaovermelho').style.top=pT+"px";	
+						document.getElementById('explosaovermelho').style.display='block';
 
-			}else if(pratAleatorio=="paz"){
-				ponto = ponto+15*multiplicador;
-				document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				document.getElementById('fogoazul').style.display='block';
+						esconde();
+						setTimeout('escondeExvermelho()',300);
 
+					}else if(pratAleatorio=="pla"){
+						ponto = ponto+50*multiplicador;
+						document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('fogocolorido').style.display='block';
+						document.getElementById('explosaopreto').style.left=pE+"px";
+						document.getElementById('explosaopreto').style.top=pT+"px";	
+						document.getElementById('explosaopreto').style.display='block';
 
-				document.getElementById('explosaoazul').style.left=pE+"px";
-				document.getElementById('explosaoazul').style.top=pT+"px";	
-				document.getElementById('explosaoazul').style.display='block';
+						esconde();
+						setTimeout('escondeExpreto()',300);
 
-				//pratoexplosao="'explosaoazul'";
-				esconde();
+					}else if(pratAleatorio=="bonus"){
+						desmultiplica();
+						escondeVezesdois();
+						escondeVezestres();
+						escondeVezesquatro();
+						escondeVezescinco();
+				        multiplicador= 2;
+						ponto = ponto+20*multiplicador;
+						document.getElementById('pontos').value=ponto;
 
-				setTimeout('escondeExazul()',300);
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('exbonus').style.left=pE+"px";
+						document.getElementById('exbonus').style.top=pT+"px";	
+						document.getElementById('exbonus').style.display='block';
+						esconde();
+						setTimeout('escondeExbonus()',300);
+						multiplicador=2;
+						document.getElementById('vezesdois').style.display='block';	
+						setTimeout('escondeVezesdois()',10000);
 
-			}else if(pratAleatorio=="pver"){
-				ponto = ponto-10*multiplicador;
-				document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				document.getElementById('fogoverde').style.display='block';
+					}else if(pratAleatorio =="bonustres"){
 
-				document.getElementById('explosaoverde').style.left=pE+"px";
-				document.getElementById('explosaoverde').style.top=pT+"px";	
-				document.getElementById('explosaoverde').style.display='block';
+						desmultiplica();	
 
-				//pratoexplosao="'explosaoverde'";
-				esconde();
+						escondeVezesdois();
+						escondeVezestres();
+						escondeVezesquatro();
+						escondeVezescinco();
+						multiplicador=3;
+						ponto = ponto+30*multiplicador;
+						document.getElementById('pontos').value=ponto;
+						acerto=acerto+1;
+						document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
+						porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
+						document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
+						document.getElementById('exbonus').style.left=pE+"px";
+						document.getElementById('exbonus').style.top=pT+"px";	
+						document.getElementById('exbonus').style.display='block';
+						esconde();
+						setTimeout('escondeExbonus()',300);
+						multiplicador=3;
+						document.getElementById('vezestres').style.display='block';	
+						setTimeout('escondeVezestres()',10000);
 
-
-				setTimeout('escondeExverde()',300);
-
-			}else if(pratAleatorio=="pvm"){
-				ponto = ponto+25*multiplicador;
-				document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				document.getElementById('fogovermelho').style.display='block';
-
-				document.getElementById('explosaovermelho').style.left=pE+"px";
-				document.getElementById('explosaovermelho').style.top=pT+"px";	
-				document.getElementById('explosaovermelho').style.display='block';
-
-				//pratoexplosao="'explosaovermelho'";
-				esconde();
-
-				setTimeout('escondeExvermelho()',300);
-
-			}else if(pratAleatorio=="pla"){
-				ponto = ponto+50*multiplicador;
-				document.getElementById('pontos').value=ponto;// valor de pontos no campo de texto
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				document.getElementById('fogocolorido').style.display='block';
-
-
-				document.getElementById('explosaopreto').style.left=pE+"px";
-				document.getElementById('explosaopreto').style.top=pT+"px";	
-				document.getElementById('explosaopreto').style.display='block';
-
-				//pratoexplosao="'explosaopreto'";
-				esconde();
-
-				setTimeout('escondeExpreto()',300);
-
-			}else if(pratAleatorio=="bonus"){
-				desmultiplica();
-				escondeVezesdois();
-				escondeVezestres();
-				escondeVezesquatro();
-				escondeVezescinco();
-				                multiplicador= 2;
-				
-				ponto = ponto+20*multiplicador;
-				document.getElementById('pontos').value=ponto;
-
-
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				//document.getElementById('fogocolorido').style.display='block';
-				document.getElementById('exbonus').style.left=pE+"px";
-				document.getElementById('exbonus').style.top=pT+"px";	
-				document.getElementById('exbonus').style.display='block';
-				esconde();
-				setTimeout('escondeExbonus()',300);
-				
-								multiplicador=2;
-
-
-				document.getElementById('vezesdois').style.display='block';	
-				//piscadois();
-				setTimeout('escondeVezesdois()',10000);
-
-
-			}else if(pratAleatorio =="bonustres"){
-
-				desmultiplica();	
-
-				escondeVezesdois();
-				escondeVezestres();
-				escondeVezesquatro();
-				escondeVezescinco();
-								multiplicador=3;
-
-				
-				ponto = ponto+30*multiplicador;
-				document.getElementById('pontos').value=ponto;
-
-				acerto=acerto+1;
-				document.getElementById('acert').value=acerto;//valor de acerto no campo de texto
-		 		porcento=(acerto*porcentagem)/totalTiro;//porcentagem de acertos
-				document.getElementById('inputPorcento').value=porcento.toFixed(2)+"%";
-				//document.getElementById('fogocolorido').style.display='block';
-				document.getElementById('exbonus').style.left=pE+"px";
-				document.getElementById('exbonus').style.top=pT+"px";	
-				document.getElementById('exbonus').style.display='block';
-				esconde();
-				setTimeout('escondeExbonus()',300);
-				multiplicador=3;
-				
-				document.getElementById('vezestres').style.display='block';	
-				//piscatres();
-				setTimeout('escondeVezestres()',10000);
-
-			}else if(pratAleatorio=="bonusquatro"){
+					}else if(pratAleatorio=="bonusquatro"){
 				desmultiplica();
 				escondeVezesdois();
 				escondeVezestres();
@@ -858,13 +797,6 @@ function escondeExbonus(){
 
 
 
-
-
-
-
-
-
-
 function setTopo(){ // seta a barra de rolagem sempre para o topo
     	$(window).scrollTop(0);
 }
@@ -881,45 +813,9 @@ function getPosicaoMiraTopo(){
 		return document.getElementById('mira').offsetTop-17;//ajuste da imagm da mira
 }
 
-/*
-$(document).ready(function(){
-		setTimeout(carregar, segundos);// carrega 4 segundos após a página ser carregada
-})
-
-function carregar (){// faz o prato aparecer após 4 segundos
-		$('#pr').show();
-		//alert("vamos")
-}
-document.addEventListener('DOMContentLoaded', function(){           
-        setTimeout(function() {
-        $("#pr").fadeOut().empty();// faz o prato sumir
-		pE=100000;//posição esquerda para não poder acertar
-		pT=100000;//posição topo para não poder acertar
-           }, segundos + 15000);// carrega 5 segundos após a pagina ser carregada
-        }, false);
-*/
-
-
-/*
-function posicaoAleatoria(){     
-     	pE= Math.round(Math.random()*790);
-     	pT=Math.round(Math.random()*400);
-	 	pratoesquerdo =pE+"px";
-	 	pratotop = pT+"px";
-	 	var vPrato="pr";
-	 	//var vPrato=pratAleatorio ou getpratAleatorio;// aqui tera q colocar a variavel dos pratos aleatorios
-		//console.log(vPrato)
-		document.getElementById(vPrato).style.left=pratoesquerdo;
-		document.getElementById(vPrato).style.top=pratotop;
-		//alert("oi zeze")
-}
-*/
 
 function acabaJogo(){
 
-//alert("                    Acabou o jogo!                  ")
-//alert("Sua pontuação total foi: "+ponto+" pontos, Com "+acerto+" Acertos, "+erro+" Erros e "+porcento.toFixed(2)+"% de aproveitamento !" )
-//direcionar para outra página
 atribuirFlag();
 px=100;//poicionamento x da mira
 py=400;//posicionamento y da mira
@@ -963,61 +859,3 @@ document.getElementById('excelente').style.display='block';
 
 
 
-/*
-function salvaDados() {
-                // alert('chamou o evento porra!');
-               /*
-                var usuario = $('#inputJogador').val();
-				var vPontuacao = $("#pontos").val();
- 				var vErro = $("#inputErro").val();
- 				var vAcerto = $("#acert").val();
- 				var vPorcento = $("#inputPorcento").val();
-
-
-                var usuario = document.getElementById('inputJogador').value;          //$('#inputJogador').val();
-				var vPontuacao = document.getElementById('pontos').value;//$("#pontos").val();
- 				var vErro = document.getElementById('inputErro').value;         //$("#inputErro").val();
- 				var vAcerto = document.getElementById('acert');    //$("#acert").val();
- 				var vPorcento = document.getElementById('inputPorcento').value;       //$("#inputPorcento").val();
- 	
-
-                $.ajax({
-                    type: "POST",
-                    url: "./usuario/dados/teste2.php",
-                    dataType: 'html',
-                     async: false,
-                     timeout: 30000,
-                    data: { jogador1: usuario,
-                    	    pontos: vPontuacao,
-                      		erros: vErro,
-                       		acertos: vAcerto,
-                        	porcento: vPorcento     
-                   },
-                    success: function (response) {
-                    		//alert(response);
-                            //alert("SALVO NO BANCO") ; 
-
-                           // location.replace("./jogo1.php")   ;           
-
-                    },
-                    error: function (error) {
-                        if (error.status && error.status === 500) {
-                            //alert(error.responseText);
-                            var textoErro = error.responseText;
-                            erro = true;
-                        } else {
-                            var textoErro = "Erro desconhecido";
-                            erro = true;
-                        }
-                        //Coloca o textoerro no alerta
-                        alert(textoErro);
-                    }
-                });
-
-
-
-
-
-
-            }
-*/
