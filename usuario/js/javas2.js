@@ -1210,8 +1210,6 @@ function setTopo() { // seta a barra de rolagem sempre para o topo
 $(window).bind('scroll', setTopo);
 
 
-
-
 function getPosicaoMiraEsquerda1() {
 	return document.getElementById('mira1').offsetLeft - 25;
 }
@@ -1258,9 +1256,6 @@ function acabaJogo() {
 	px2 = 650;
 	py2 = 400;
 
-
-
-
 	$(function () {//faz a musica tocar
 		var musica = new Audio('./sons/final.wav');//
 		musica.play();
@@ -1271,23 +1266,14 @@ function acabaJogo() {
 
 	var usuario1 = document.getElementById('inputJogador1').value;
 	var pon1 = document.getElementById('pontos1').value;
-	//var acert1 =document.getElementById('acert1').value;
 	var inputErro1 = document.getElementById('inputErro1').value;
 	var por1 = document.getElementById('inputPorcento1').value;
-
 	var re = document.getElementById('re').value;
 	var r = parseInt(re);
-
 	var pon2 = document.getElementById('pontos2').value;
-	//var acert2 =document.getElementById('acert2').value;
 	var usuario2 = document.getElementById('inputJogador2').value;
 	var inputErro2 = document.getElementById('inputErro2').value;
 	var por2 = document.getElementById('inputPorcento2').value;
-
-
-
-	//var re = document.getElementById('re').value;
-
 
 	if (pon1 > r || pon2 > r) {
 
