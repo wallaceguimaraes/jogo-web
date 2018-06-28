@@ -223,14 +223,6 @@ animation: fadeIn 1s ease-in-out;
 
 <body class="fadeEntra" onload="pisca(); piscamira1(); piscaVez(); piscamira2(); tempo();" bgcolor="green">
 
-
-
-
-
-
-
-
-
 			<h1 id="letr"><b>Acerte os pratos!</b></h1>
 			<h2 id="jog1"><b>Jogador 1:</b> </h2>
 			<h3 id="pontua1"><b> Pontuação:</b></h3>
