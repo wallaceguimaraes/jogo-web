@@ -78,7 +78,6 @@ function inicia() {
 	document.addEventListener("keydown", tiroDw1);
 	document.addEventListener("keyup", tiroUp1);
 	document.addEventListener("keyup", teclaUp1);
-
 	setTimeout('document.addEventListener("keydown",teclaDw2)', 105500);
 	setTimeout('document.addEventListener("keydown",tiroDw2)', 105500);
 	setTimeout('atribuirFlag()', 100000);
