@@ -212,19 +212,12 @@ musica.play();
 		<img src="visual/ceu.jpg" style="border: 3px solid; height: 600px; width: 900px" class="ceu" />		
 
 		<div id="acerto"style="display:none;" ><img src="visual/acerto.png"/></div>
-
 		<div id="erro"style="display:none;"><img src="visual/erro.png"/></div>
-
 		<div id="pr"style="display:none;"><img src="visual/pratoroxo.png"/></div>
-
         <div id="pam"style="display:none;"><img src="visual/pratoamarelo.png"/></div>
-        
       	<div id="paz"style="display:none;"> <img src="visual/pratoazul.png"/></div>
-
       	<div id="pver"style="display:none;"><img src="visual/pratoverde.png"/></div>
-
       	<div id="pvm"style="display:none;"><img src="visual/pratovermelho.png"/></div>
-
       	<div id="pla"style="display:none;"><img src="visual/pratolaranja.png"/></div>
 
       	<div id="bonus"style="display:none; position:absolute;"><img src="visual/bonus.png"/></div>
@@ -232,18 +225,13 @@ musica.play();
       	<div id="bonusquatro"style="display:none; position:absolute;"><img src="visual/bonusquatro.png"/></div>
       	<div id="bonuscinco"style="display:none; position:absolute;"><img src="visual/bonuscinco.png"/></div>
 
-
-
-
-      	<div id="explosaoroxo" ><img src="visual/explosaoroxo.png"/></div>
-      	<div id="explosaoamarelo"><img src="visual/explosaoamarelo.png"/></div>
-      	<div id="explosaoazul"><img src="visual/explosaoazul.png"/></div>
-      	<div id="explosaovermelho"><img src="visual/explosaovermelho.png"/></div>
-      	<div id="explosaoverde"><img src="visual/explosaoverde.png"/></div>
-	    <div id="explosaopreto"><img src="visual/explosaopreto.png"/></div>
-      	<div id="exbonus" style="position: absolute;"><img src="visual/exbonus.png"/></div>
-
-
+      	<div id="explosaoroxo" style="display:none;" ><img src="visual/explosaoroxo.png"/></div>
+      	<div id="explosaoamarelo" style="display:none;" ><img src="visual/explosaoamarelo.png"/></div>
+      	<div id="explosaoazul" style="display:none;" ><img src="visual/explosaoazul.png"/></div>
+      	<div id="explosaovermelho" style="display:none;" ><img src="visual/explosaovermelho.png"/></div>
+      	<div id="explosaoverde" style="display:none;" ><img src="visual/explosaoverde.png"/></div>
+	    <div id="explosaopreto"style="display:none;" ><img src="visual/explosaopreto.png"/></div>
+      	<div id="exbonus" style="position: absolute; display:none;"><img src="visual/exbonus.png"/></div>
 
 		<div id="bola" class="bol">
 			<img src="visual/bola.png"/>
@@ -252,14 +240,9 @@ musica.play();
 		<div id="mira" class="mir" >
 					<img src="visual/mira.png" />
 		</div>
-
-	
 			<div id="canhao1" >
 				<img src="visual/canhao1.png"/>
 			</div>
-
-
-
 
 			<!--div modal -->
 <div class="modal fade" id="myModal">
@@ -284,7 +267,6 @@ musica.play();
 	<p></p>
 	<div id="parabens" style="display:none;"><img src="visual/parabens.png"></div>
 	
-
 </div>
 <div class="modal-footer">
 	<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -296,11 +278,7 @@ musica.play();
 </div>
 </div>
 		
-
-
-
 </div>
-
 
 	<label for="label" style="color: black; position: absolute; left: 50px; top: 60px;"><b>Maior Pontuação:</b></label>
 	<div><input type="text" id="re"name="ace" style="position: absolute;text-align:center; width: 100px; left: 50px; top: 80px;" value="" readonly="readonly"/></div>
@@ -308,22 +286,12 @@ musica.play();
 	<label for "label2" style="color:black; position: absolute; right: 50px; top: 60px;"><b>Dificuldade:</b></label>
 	<div><input type="text" id="d"name="ace" style="position: absolute; text-align:center; width: 100px; right: 50px; top: 80px;" value="<?php echo $dificulty; ?>" readonly="readonly"/></div>
 
-
-		<!--
-		<div id="barra">
-			<div id="carregamento"></div>			
-		</div>
--->
-
 <script src="jquery-3.3.1.min.js"></script>
 <script src="usuario/js/javas.js"></script>
 
-
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-
 <script>
-
 
 var record="<?php echo $recorde; ?>"; 
 document.getElementById('re').value=record;
@@ -364,11 +332,6 @@ $('#myModal').on('shown.bs.modal', function(e) {
 });
 */
 
-
-
-
-
-
 function salvaDados() {
                 // alert('chamou o evento porra!');
                 var usuario = $('#inputJogador').val();
@@ -378,10 +341,7 @@ function salvaDados() {
  				var vPorcento = $("#inputPorcento").val();
  				var vDificuldade = $("#d").val();
 
- 			
-
  				//alert(usuario)
-
 
                 $.ajax({
                     type: "POST",
@@ -414,17 +374,7 @@ function salvaDados() {
                         alert(textoErro);
                     }
                 });
-
-
-
-
-
-
             }
-
-
-
-
 
 </script>
 </body>
