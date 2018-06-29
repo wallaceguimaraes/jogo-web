@@ -23,7 +23,6 @@ $recorde=0;
 				<link rel="stylesheet" type="text/css" href="visual/css/estilo2.css"> 
 				<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
-
 				<style>
 
 					body{
@@ -221,20 +220,20 @@ $recorde=0;
 				<div id="bonustres"style="display:none; position:absolute;"><img src="visual/bonustres.png"/></div>
 				<div id="bonusquatro"style="display:none; position:absolute;"><img src="visual/bonusquatro.png"/></div>
 				<div id="bonuscinco"style="display:none; position:absolute;"><img src="visual/bonuscinco.png"/></div>
-				<div id="explosaoroxo1" ><img src="visual/explosaoroxo.png"/></div>
-				<div id="explosaoamarelo1"><img src="visual/explosaoamarelo.png"/></div>
-				<div id="explosaoazul1"><img src="visual/explosaoazul.png"/></div>
-				<div id="explosaovermelho1"><img src="visual/explosaovermelho.png"/></div>
-				<div id="explosaoverde1"><img src="visual/explosaoverde.png"/></div>
-				<div id="explosaopreto1"><img src="visual/explosaopreto.png"/></div>
-				<div id="exbonus1" style="position: absolute;"><img src="visual/exbonus.png"/></div>
-				<div id="explosaoroxo2" ><img src="visual/explosaoroxo.png"/></div>
-				<div id="explosaoamarelo2"><img src="visual/explosaoamarelo.png"/></div>
-				<div id="explosaoazul2"><img src="visual/explosaoazul.png"/></div>
-				<div id="explosaovermelho2"><img src="visual/explosaovermelho.png"/></div>
-				<div id="explosaoverde2"><img src="visual/explosaoverde.png"/></div>
-				<div id="explosaopreto2"><img src="visual/explosaopreto.png"/></div>
-				<div id="exbonus2" style="position: absolute;"><img src="visual/exbonus.png"/></div>
+				<div id="explosaoroxo1" style="display:none;" ><img src="visual/explosaoroxo.png"/></div>
+				<div id="explosaoamarelo1" style="display:none;" ><img src="visual/explosaoamarelo.png"/></div>
+				<div id="explosaoazul1" style="display:none;" ><img src="visual/explosaoazul.png"/></div>
+				<div id="explosaovermelho1" style="display:none;" ><img src="visual/explosaovermelho.png"/></div>
+				<div id="explosaoverde1" style="display:none;" ><img src="visual/explosaoverde.png"/></div>
+				<div id="explosaopreto1" style="display:none;" ><img src="visual/explosaopreto.png"/></div>
+				<div id="exbonus1" style="position: absolute; display:none;"><img src="visual/exbonus.png"/></div>
+				<div id="explosaoroxo2"style="display:none;" ><img src="visual/explosaoroxo.png"/></div>
+				<div id="explosaoamarelo2" style="display:none;" ><img src="visual/explosaoamarelo.png"/></div>
+				<div id="explosaoazul2" style="display:none;" ><img src="visual/explosaoazul.png"/></div>
+				<div id="explosaovermelho2" style="display:none;" ><img src="visual/explosaovermelho.png"/></div>
+				<div id="explosaoverde2" style="display:none;" ><img src="visual/explosaoverde.png"/></div>
+				<div id="explosaopreto2" style="display:none;" ><img src="visual/explosaopreto.png"/></div>
+				<div id="exbonus2" style="position: absolute; display:none;"><img src="visual/exbonus.png"/></div>
 				<div id="bola1" class="bol1"><img src="visual/bola.png"/></div>
 				<div id="bola2" class="bol2"><img src="visual/bola.png"/></div>
 				<div id="mira1" class="mir" ><img src="visual/mira.png" /></div>
@@ -279,12 +278,10 @@ $recorde=0;
 							</div>
 						</div>		
 					</div>
-				
 							<label for="label" style="color: black; position: absolute; left: 50px; top: 60px;"><b>Maior Pontuação:</b></label>
 							<div><input type="text" id="re"name="ace" style="position: absolute; text-align:center; width: 100px; left: 50px; top: 80px;" value="<?php echo $recorde; ?>" readonly="readonly"/></div>
 							<label for "label2" style="color:black; position: absolute; right: 118px; top: 60px;"><b>Dificuldade:</b></label>
 							<div><input type="text" id="d"name="ace" style="position: absolute; text-align: center; width: 100px; right: 100px; top: 80px;" value="<?php echo $dificulty; ?>" readonly="readonly"/></div>
-					
 					<script>
 
 						var record="<?php echo $recorde; ?>"; 
@@ -332,7 +329,6 @@ $recorde=0;
 							salvaDados();
 							setTimeout('location.replace("./tabela.php")',200);
 						});
-
 
 								function salvaDados() {
 										var usuario = $('#inputJogador2').val();
