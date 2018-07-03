@@ -27,7 +27,6 @@ var pratoexplosao;
 var multiplicador = 1;
 var segundoauxiliar = 4000;
 
-
 function inicia() {
 
 	dx = 0;//direção x
