@@ -247,7 +247,6 @@ function tiroDw() {
 				} else if (pratAleatorio == "bonustres") {
 
 					desmultiplica();
-
 					escondeVezesdois();
 					escondeVezestres();
 					escondeVezesquatro();
@@ -796,14 +795,10 @@ function escondeExbonus() {
 }
 
 
-
 function setTopo() { // seta a barra de rolagem sempre para o topo
 	$(window).scrollTop(0);
 }
 $(window).bind('scroll', setTopo);
-
-
-
 
 function getPosicaoMiraEsquerda() {
 	return document.getElementById('mira').offsetLeft - 25;
@@ -812,7 +807,6 @@ function getPosicaoMiraEsquerda() {
 function getPosicaoMiraTopo() {
 	return document.getElementById('mira').offsetTop - 17;//ajuste da imagm da mira
 }
-
 
 function acabaJogo() {
 
@@ -827,7 +821,6 @@ function acabaJogo() {
 
 	});
 
-
 	$('#myModal').modal({ backdrop: 'static', keyboard: false })
 	var pon = document.getElementById('pontos').value;
 	var por = document.getElementById('inputPorcento').value;
@@ -836,7 +829,6 @@ function acabaJogo() {
 
 	document.getElementById('pontoF').value = pon;
 	document.getElementById('porcentoF').value = por;
-
 
 	if (pon > r) {
 		document.getElementById('novo').style.display = 'block';

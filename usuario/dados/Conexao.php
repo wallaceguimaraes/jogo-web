@@ -9,7 +9,6 @@ class Conexao {
      private static $charset = "utf8";
      private static $conexao;
 
-
      public static function getConnection() {
         if (Conexao::$conexao == null) {
             try {

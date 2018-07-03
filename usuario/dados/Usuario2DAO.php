@@ -17,7 +17,6 @@ class Usuario2DAO {
             $stmt->bindValue(5, $usu->getPorcento(), PDO::PARAM_STR);
             $stmt->bindValue(6, $usu->getDificuldade(), PDO::PARAM_STR);
 
-
             $stmt->execute();
 			
         } catch (Throwable $ex) {
@@ -25,7 +24,6 @@ class Usuario2DAO {
             throw $e;
         }
     }
-
 
     public static function update(Usuario $dto) {
         try {
@@ -39,8 +37,7 @@ class Usuario2DAO {
             $e = new Exception("Um erro ocorreu ao atualizar um usuario. <br>" . $ex->getMessage());
             throw $e;
         }
-    }
-    
+    }  
 /*
     static function Read($filtro, $orderby) {
         try {
@@ -64,16 +61,14 @@ class Usuario2DAO {
     }
     
 */
-
 static function Read() {
         try {
             $db = Conexao::getConnection();
             $str = ("SELECT * FROM usuario;");
-         
             $stmt = $db->query($str);
-
             $stmt->setFetchMode(PDO::FETCH_CLASS, 'Usuario');
             $dtos = $stmt->fetchAll();
+            
             return $dtos;
         
         } catch (Throwable $ex) {
@@ -81,8 +76,6 @@ static function Read() {
             throw $e;
         }
     }
-
-
 
     static function delete(Usuario $dto){
        try {
@@ -95,7 +88,4 @@ static function Read() {
             throw $e;
         }
     }
-    
-    
-
 }

@@ -40,7 +40,6 @@ var pratoexplosao;
 multiplicador1 = 1;
 multiplicador2 = 1;
 
-
 function inicia() {
 
 	dx1 = 0;//direção x
@@ -73,11 +72,11 @@ function inicia() {
 		segundos = segundos;
 	}
 	
-
 	document.addEventListener("keydown", teclaDw1);
 	document.addEventListener("keydown", tiroDw1);
 	document.addEventListener("keyup", tiroUp1);
 	document.addEventListener("keyup", teclaUp1);
+
 	setTimeout('document.addEventListener("keydown",teclaDw2)', 105500);
 	setTimeout('document.addEventListener("keydown",tiroDw2)', 105500);
 	setTimeout('atribuirFlag()', 100000);
@@ -433,12 +432,7 @@ function tiroDw1() {
 
 		//para de atirar
 	}
-
-
-
 }
-
-
 
 function piscadois1() {// pisca letra
 	var f = document.getElementById('vezesdois1');
@@ -516,7 +510,6 @@ function escondeVezescinco2() {
 	document.getElementById('vezescinco2').style.display = 'none';
 	desmultiplica2();
 }
-
 
 function tiroDw2() {
 
@@ -761,15 +754,9 @@ function tiroDw2() {
 		}
 
 	} else {
-
 		//para de atirar
 	}
-
-
-
 }
-
-
 
 function tiroUp1() {
 	var tecla = event.keyCode;
@@ -797,10 +784,7 @@ function posicaoBolaTopo1() {
 	return document.getElementById('bola1').offsetTop;
 }
 
-
-
 function teclaDw1() {
-
 
 	if (flag == 1) {
 
@@ -825,7 +809,6 @@ function teclaDw1() {
 		px1 = 100;
 		py1 = 400;
 	}
-
 }
 
 function atribuirFlag() {// atribui flag pro jogador 1 parar de jogar
@@ -852,7 +835,6 @@ function tiroUp2() {
 		document.getElementById('fogovermelho2').style.display = 'none';
 		document.getElementById('fogoverde2').style.display = 'none';
 		document.getElementById('fogocolorido2').style.display = 'none';
-
 
 	}
 }
@@ -890,17 +872,12 @@ function teclaDw2() {
 		py2 = 400;
 	}
 
-
-
 }
-
-
 
 $(function () {//faz a musica tocar
 	var musica = new Audio('./sons/dokan.mp3');//
 	musica.play();
 });
-
 
 function pisca() {// pisca letra
 	var f = document.getElementById('letr');
@@ -936,7 +913,6 @@ function teclaUp1() {
 	}
 }
 
-
 function teclaUp2() {
 	var tecla = event.keyCode;
 	if (tecla == 37) {//tecla esquerda
@@ -963,7 +939,6 @@ function enterFrame() {// colocar mira 2 aqui tbm
 }
 
 window.addEventListener("load", inicia);
-
 
 function getpratosAleatorio() {
 	var vPrat = ["pr", "pam", "paz", "pver", "pvm", "pla", "bonus", "bonustres", "bonusquatro", "bonuscinco"];
@@ -1116,22 +1091,15 @@ function exibe() {// função que exibe os pratos
 			setTimeout('esconde()', segundos - 3250);
 
 		}
-
 		setTimeout('exibe()', segundos - 2500);
-
 	}
-
-
-
 }
-
 
 function esconde() {
 	pE = 100000 + "px";//
 	pT = 100000 + "px";//
 	document.getElementById(pratAleatorio).style.display = 'none';
 }
-
 
 function escondeExroxo1() {
 	
@@ -1167,7 +1135,6 @@ function escondeExbonus1() {
 
 }
 
-
 function escondeExroxo2() {
 	
 	document.getElementById('explosaoroxo2').style.display = 'none';
@@ -1199,15 +1166,12 @@ function escondeExbonus2() {
 	pE = 100000 + "px";
 	pT = 100000 + "px";
 	document.getElementById('exbonus2').style.display = 'none';
-
 }
-
 
 function setTopo() { // seta a barra de rolagem sempre para o topo
 	$(window).scrollTop(0);
 }
 $(window).bind('scroll', setTopo);
-
 
 function getPosicaoMiraEsquerda1() {
 	return document.getElementById('mira1').offsetLeft - 25;
@@ -1217,7 +1181,6 @@ function getPosicaoMiraTopo1() {
 	return document.getElementById('mira1').offsetTop - 17;//ajuste da imagm da mira
 }
 
-
 function getPosicaoMiraEsquerda2() {
 	return document.getElementById('mira2').offsetLeft - 25;
 }
@@ -1225,8 +1188,6 @@ function getPosicaoMiraEsquerda2() {
 function getPosicaoMiraTopo2() {
 	return document.getElementById('mira2').offsetTop - 17;//ajuste da imagm da mira
 }
-
-
 
 function vezJogador() {
 
@@ -1239,14 +1200,11 @@ function vezJogador() {
 	document.getElementById('vez').style.display = 'block';
 }
 
-
 function escondeVezJogador() {
 
 	document.getElementById('vez').style.display = 'none';
 
 }
-
-
 
 function acabaJogo() {
 
@@ -1259,7 +1217,6 @@ function acabaJogo() {
 		var musica = new Audio('./sons/final.wav');//
 		musica.play();
 	});
-
 
 	$('#myModal').modal({ backdrop: 'static', keyboard: false })
 
@@ -1360,8 +1317,6 @@ function acabaJogo() {
 		document.getElementById('pontoF').value = pon2;
 		document.getElementById('porcentoF').value = por2;
 
-
-
 	} else if (pon1 == pon2 && porcentot1 == porcento2 && inputErro1 < inputErro2) {
 
 		document.getElementById('jogador1vence').style.display = 'block';
@@ -1383,8 +1338,5 @@ function acabaJogo() {
 		document.getElementById('porcentoF').value = "Empatou!";
 
 	}
-
-
-
 }
 

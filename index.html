@@ -1,220 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="utf-8"/>
-<title>Página inicial</title>
+  <meta charset="utf-8"/>
+    <title>Página inicial</title>
+
+    <link rel="stylesheet" type="text/css" href="visual/css/reset.css"> <!--css-->
+    <link rel="stylesheet" type="text/css" href="visual/css/style.css"> <!--css-->
+
+            <!--<script src="caminho arquivo javascript"></script>-->
+      <style>
+              /*a{
+              text-decoration:none; tira sublinhado
+              }
+              a{
+                
+                a: hover{
+                  color: Red; mouse em cima do link fica vermelho
+                }
+              }
+              .link{ text-decoration: none Criei a classe para adicionar depois no link q eu quiser
+                      color: Green; 
+              }
+              -*/
+
+            h3{
+              font-size: 100px;
+              position: absolute;
+              left: 70px;
+              color: black;
+                top: 50px;
+              font:normal 45pt Arial;
+              color:white;
+              text-shadow: 0 1px 0 black,
+              0 2px 0 #c9c9c9,
+              0 3px 0 #bbb,
+              0 4px 0 #b9b9b9,
+              0 5px 0 #aaa,
+              0 6px 1px rgba(0,0,0,.1),
+              0 0 5px rgba(0,0,0,.1),
+              0 1px 3px rgba(0,0,0,.3),
+              0 3px 5px rgba(0,0,0,.2),
+              0 5px 10px rgba(0,0,0,.25),
+              0 10px 10px rgba(0,0,0,.6),
+              0 20px 20px rgba(0,0,0,.15);
+            }
+
+       </style>
+
+          <script>
+
+                      function pisca() {// pisca letra
+                            
+                            var f = document.getElementById('letr');
+                            setInterval(function() {
+                                f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+                              }, 200);
+                        }
+
+                      function toca(){
+
+                          $(function(){//faz a musica tocar
+                          var musica = new Audio('./sons/Bonker.mp3');//
+                          musica.play();
+                          setTimeout('toca()', 70000);
+                         });
+                        }
+
+                      function piscUm(){
+
+                            var f = document.getElementById('botaoJogador1');
+                            setInterval(function() {
+                                f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+                              }, 100);
+                      }
+
+                      function piscMulti(){
+
+                            var f = document.getElementById('botaoMulti');
+                            setInterval(function() {
+                                f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+                              }, 100);
+                        }
+
+                      function piscaOn(){
+                      
+                            var f = document.getElementById('botaoOnline');
+                            setInterval(function() {
+                                f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+                              }, 100);
+                        }
+
+                      function chamaRecord(){
+
+                            var f = document.getElementById('record');
+                            setInterval(function() {
+                                f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+                              }, 100);
+                            
+                            $(function(){//faz a musica tocar
+                              var musica = new Audio('./sons/laser.mp3');//
+                               musica.play();
+
+                                //setTimeout('location.replace("./Recorde.html")',1000);
+                              setTimeout('location.replace("./tabela.php")',1000);
+                             });
+                        }
 
+                        function umJoga() {
+                                      // alert('chamou o evento porra!');
+                                    
+                                                  //alert("SALVO NO BANCO") ; 
 
+                                                    piscUm();
+                            $(function(){//faz a musica tocar
+                              var musica = new Audio('./sons/laser.mp3');//
+                              musica.play();
 
-<link rel="stylesheet" type="text/css" href="visual/css/reset.css"> <!--css-->
-<link rel="stylesheet" type="text/css" href="visual/css/style.css"> <!--css-->
+                              });
+                                    setTimeout('location.replace("./entrar1.php")', 1000);           
+                          }
 
+                      function instrui(){
 
+                      alert(" Atenção, no modo jogador 1, você terá 1:40 (um minuto e quarenta segundos) para fazer o máximo de pontuação possível. Utilizando as teclas direita, cima, esquerda e baixo, para movimentar a mira, e a tecla 'A' para atirar. No modo multi-jogador, cada jogador terá 1:40 segundos para pontuar, e enquanto o jogador 1 estiver ativo o jogador 2 estará bloqueado, só então depois de 1:40 segundos o jogador 2 será liberado para jogar e o jogador 1 será bloqueado. Utiliza-se as teclas 'AWSD' para direcionar a mira do jogador 1, e atira com a tecla '1'. Já o jogador 2 movimenta a mira com as teclas direita, cima, esquerda e baixo, e atira com a tecla 'L'.")
 
-<!--<script src="caminho arquivo javascript"></script>-->
-<style>
-/*a{
-text-decoration:none; tira sublinhado
-}
-a{
-	
-	a: hover{
-		color: Red; mouse em cima do link fica vermelho
-	}
-}
-.link{ text-decoration: none Criei a classe para adicionar depois no link q eu quiser
-        color: Green; 
-}
--*/
+                      //$('#myModal').modal({backdrop:'static',keyboard:false})
+                      }
 
- h3{
-	font-size: 100px;
-	position: absolute;
-	left: 70px;
-	color: black;
-    top: 50px;
-	font:normal 45pt Arial;
- 	color:white;
- 	text-shadow: 0 1px 0 black,
- 	0 2px 0 #c9c9c9,
- 	0 3px 0 #bbb,
- 	0 4px 0 #b9b9b9,
- 	0 5px 0 #aaa,
- 	0 6px 1px rgba(0,0,0,.1),
- 	0 0 5px rgba(0,0,0,.1),
- 	0 1px 3px rgba(0,0,0,.3),
- 	0 3px 5px rgba(0,0,0,.2),
- 	0 5px 10px rgba(0,0,0,.25),
- 	0 10px 10px rgba(0,0,0,.6),
- 	0 20px 20px rgba(0,0,0,.15);
-    
+                      function jogaMulti(){
 
-}
+                            piscMulti();
+                            $(function(){//faz a musica tocar
 
+                              var musica = new Audio('./sons/laser2.mp3');//
+                              musica.play();
 
-</style>
+                             });
+                               setTimeout('location.replace("./entrar2.php")',1000);              
+                       }
 
-<script>
 
+                      function jogaOnline(){
 
-function pisca() {// pisca letra
-      var f = document.getElementById('letr');
-      setInterval(function() {
-      f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
-  }, 200);
+                            /*
+                            piscaOn();
 
-}
+                            $(function(){//faz a musica tocar
 
+                            var musica = new Audio('./sons/laser3.mp3');//
+                            musica.play();
 
-function toca(){
+                            });
+                            */
 
-  $(function(){//faz a musica tocar
+                          alert(" Em manutenção, tente mais tarde por favor!")
+                       }
 
-var musica = new Audio('./sons/Bonker.mp3');//
-musica.play();
+                      function instrucao(){
 
-      setTimeout('toca()', 70000);
-
-});
-
-}
-
-
-function piscUm(){
-
-  var f = document.getElementById('botaoJogador1');
-      setInterval(function() {
-      f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
-  }, 100);
-
-
-}
-function piscMulti(){
-
-  var f = document.getElementById('botaoMulti');
-      setInterval(function() {
-      f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
-  }, 100);
-
-
-}
-
-function piscaOn(){
-var f = document.getElementById('botaoOnline');
-      setInterval(function() {
-      f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
-  }, 100);
-
-
-}
-
-
-function chamaRecord(){
-
-var f = document.getElementById('record');
-      setInterval(function() {
-      f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
-  }, 100);
-
-  $(function(){//faz a musica tocar
-
-var musica = new Audio('./sons/laser.mp3');//
-musica.play();
-
-  //setTimeout('location.replace("./Recorde.html")',1000);
-  setTimeout('location.replace("./tabela.php")',1000);
-
-});
-
-
-
-}
-
-            function umJoga() {
-                // alert('chamou o evento porra!');
-              
-                            //alert("SALVO NO BANCO") ; 
-
-                              piscUm();
-  $(function(){//faz a musica tocar
-
-var musica = new Audio('./sons/laser.mp3');//
-musica.play();
-
-});
-
-
-              setTimeout('location.replace("./entrar1.php")', 1000);           
-
-             }
-
-function instrui(){
-
-alert(" Atenção, no modo jogador 1, você terá 1:40 (um minuto e quarenta segundos) para fazer o máximo de pontuação possível. Utilizando as teclas direita, cima, esquerda e baixo, para movimentar a mira, e a tecla 'A' para atirar. No modo multi-jogador, cada jogador terá 1:40 segundos para pontuar, e enquanto o jogador 1 estiver ativo o jogador 2 estará bloqueado, só então depois de 1:40 segundos o jogador 2 será liberado para jogar e o jogador 1 será bloqueado. Utiliza-se as teclas 'AWSD' para direcionar a mira do jogador 1, e atira com a tecla '1'. Já o jogador 2 movimenta a mira com as teclas direita, cima, esquerda e baixo, e atira com a tecla 'L'.")
-
-
-
-
-//$('#myModal').modal({backdrop:'static',keyboard:false})
-
-}
-
-
-
-function jogaMulti(){
-
-      piscMulti();
-  $(function(){//faz a musica tocar
-
-var musica = new Audio('./sons/laser2.mp3');//
-musica.play();
-
-});
-
-
-                   setTimeout('location.replace("./entrar2.php")',1000);              
-
-}
-
-
-function jogaOnline(){
-
-/*
-piscaOn();
-
-$(function(){//faz a musica tocar
-
-var musica = new Audio('./sons/laser3.mp3');//
-musica.play();
-
-});
-*/
-
-alert(" Em manutenção, tente mais tarde por favor!")
-
-}
-
-function instrucao(){
-
-$('#myModal2').modal({backdrop:'static',keyboard:false})
-
-
-}
-
-
-
-        </script>
-
-
-
-</head>
+                      $('#myModal2').modal({backdrop:'static',keyboard:false})
+                      }
+          </script>
+  </head>
 
 <body onload="pisca(); toca();" bgcolor="purple">
 
 
 <div class="painelfundo"></div>
 
-<div class="painelprincipal" style="position:center;">
+<div class="painelprincipal" >
 
     <h3 id="letr">Escolha o modo de jogo: </h3>
  
@@ -228,8 +182,6 @@ $('#myModal2').modal({backdrop:'static',keyboard:false})
 <!--
 </form>
 -->
-
-
 <div id="instru" onclick="instrui()"><img src="visual/instru.png"></div>
 
 <!--

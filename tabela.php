@@ -95,7 +95,6 @@ animation: fadeIn 1s ease-in-out;
 					<?php  } 
 			 ?>
 			</table>
-		
 		</div>
 				<a id="pagina" style="position: absolute; left: 20px; top: 20px;" onclick="pagina()">Página inicial</a>
 					<script src="jquery-3.3.1.min.js"></script>

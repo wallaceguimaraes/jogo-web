@@ -13,8 +13,6 @@ class Usuario2 {
     private $porcento;
     private $dificuldade;
 
-
-    
     function __construct() {
     }
     
@@ -47,9 +45,6 @@ class Usuario2 {
         return $this->dificuldade;
     }
 
-
-
-
     function setId_Usuario($id_Usuario) {
         $this->id = $id_Usuario;
     }
@@ -57,7 +52,6 @@ class Usuario2 {
     function setNome_Usuario($nome_Usuario) {
         $this->nome_Usuario =strtoupper($nome_Usuario);
     }
-
 
     function setPontuacao($pontuacao){
         $this->pontuacao = $pontuacao;
@@ -78,7 +72,5 @@ class Usuario2 {
     function setDificuldade($dificuldade)
     {
        $this->dificuldade = $dificuldade; 
-    }
-
-    
+    }  
 }
